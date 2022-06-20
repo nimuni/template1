@@ -18,7 +18,6 @@ var schema = buildSchema(`
 var root = { hello: () => 'Hello world!' };
 
 router.use('/', (req, res, next)=>{
-  console.log("end")
   next()
 }, graphqlHTTP({
   schema: schema,
